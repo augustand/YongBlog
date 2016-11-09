@@ -38,13 +38,10 @@ if __name__ == "__main__":
 
     loop = IOLoop.instance()
 
-    print "http://{}:{}".format("localhost", 8889)
+    print "http://{}:{}".format("localhost", 5210)
 
-    HTTPServer(app).listen(8889)
+    HTTPServer(app).listen(5210)
     try:
-        # server = gevent.wsgi.WSGIServer(('', 8888), wsgi_app, debug=True)
-        # server.serve_forever()
-        # loop.add_callback(webbrowser.open, url)
         loop.start()
     except KeyboardInterrupt:
         print(" Shutting down on SIGINT!")

@@ -14,6 +14,9 @@ class DocsHandler(web.RequestHandler):
 
         print _path
 
+        if _path.endswith(".map"):
+            return
+
         if _path.endswith(".md"):
 
             _content = open(_path).read()
