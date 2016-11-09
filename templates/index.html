@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Okdoc</title>
+
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/font-awesome/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/highlight/xcode-a.css"/>
+
+    <script src="/static/js/highlight.min.js"></script>
+    <script src="/static/js/marked.min.js"></script>
+    <script src="/static/js/renderer.js"></script>
+
+    <style>
+
+        #gnav {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        ul li {
+            float: left;
+            list-style: outside none none;
+        }
+
+        ul li:nth-child(odd) {
+            margin-right: 80px;
+        }
+
+        ul li a {
+            display: inline-block;
+            width: 400px;
+            padding: 6px 0;
+        }
+
+        ul li a:last-child {
+            border-bottom: 1px solid #E2E2E2 !important;
+        }
+
+        #gnav .linker {
+            line-height: 2.6;
+        }
+
+        #gnav .linker .fa {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav id="gnav">
+    <nav id="gmenu" class="fixer">
+        <!--<a class="btn flush" href="/flush"><i class="fa fa-level-up"></i></a>-->
+        <a class="btn github" href="https://github.com/tulayang/okdoc"><i class="fa fa-github"></i></a>
+        <a class="btn logout" href="#"><i class="fa fa-sign-out"></i></a>
+    </nav>
+    <h1>OK Documentation</h1>
+    <div class="content"></div>
+</nav>
+
+<script type="text/javascript">
+    (function (hljs, marked) {
+
+///////////////////////////// 需要服务端渲染的数据 /////////////////////////////
+        const gnavText = `{{name}}`;
+/////////////////////////////////////////////////////////////////////////////
+
+        var renderer = new Renderer();
+        renderer.setMode(RendererMode.rmGnav | RendererMode.rmContent);
+
+        var elGnavContent = document.querySelector("#gnav .content");
+        elGnavContent.innerHTML = renderer.html(gnavText);
+    }(hljs, marked));
+</script>
+
+</body>
+</html>
