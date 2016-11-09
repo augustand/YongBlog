@@ -1,0 +1,7 @@
+* [**previous**](/docs/Backup/rust)
+* [**beauty**](/docs/Backup/rust/syntax/beauty.md)
+* [**cli**](/docs/Backup/rust/syntax/cli.md)
+* [**no features by default**](/docs/Backup/rust/syntax/compile.md)
+* [**index**](/docs/Backup/rust/syntax/index.md)
+* [**install**](/docs/Backup/rust/syntax/install.md)
+* [**syntax**](/docs/Backup/rust/syntax/syntax.md)

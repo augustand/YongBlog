@@ -12,8 +12,6 @@ class MainHandler(web.RequestHandler):
 class DocsHandler(web.RequestHandler):
     def get(self, _path):
 
-        print _path
-
         if _path.endswith(".map"):
             return
 

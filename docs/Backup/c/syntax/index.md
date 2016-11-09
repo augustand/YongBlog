@@ -1,0 +1,5 @@
+* [**previous**](/docs/Backup/c)
+* [**beauty**](/docs/Backup/c/syntax/beauty.md)
+* [**compile**](/docs/Backup/c/syntax/compile.md)
+* [**index**](/docs/Backup/c/syntax/index.md)
+* [**syntax**](/docs/Backup/c/syntax/syntax.md)

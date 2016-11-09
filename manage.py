@@ -34,8 +34,6 @@ class Application(web.Application):
 if __name__ == "__main__":
 
     app = Application()
-    # wsgi_app = wsgi.WSGIAdapter(app)
-
     loop = IOLoop.instance()
 
     print "http://{}:{}".format("localhost", 5210)
@@ -47,10 +45,3 @@ if __name__ == "__main__":
         print(" Shutting down on SIGINT!")
         loop.stop()
         traceback.format_exc()
-    finally:
-        pass
-
-
-# loop.close()
-# IOLoop.current().start()
-# IOLoop.current().start()

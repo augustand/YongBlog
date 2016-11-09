@@ -1,4 +1,3 @@
-* [**previous**](/docs)
 * [**Backup**](/docs/Backup)
 * [**Compilers of Dragon**](/docs/Compilers of Dragon)
 * [**Deployment**](/docs/Deployment)
@@ -20,3 +19,4 @@
 * [**基础指南**](/docs/DOING.md)
 * [**index**](/docs/index.md)
 * [**使用 syslog 记录消息**](/docs/TEST.md)
+* [**previous**](/docs)
