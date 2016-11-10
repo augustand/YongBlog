@@ -5,13 +5,17 @@
 Variable (变量)
 -------------------
 
+|ddd|ddd|ddd|
+----|---|---|
+
+
 ```
 NAME=xiaoming
-EMAIL="send ${NAME}@gamil.com"
+EMAIL=&quot;send ${NAME}@gamil.com&quot;
 DAEMON=/usr/bin/redis-server
 
-[ -x $DAEMON ] || exit 0            # test -x $DAEMON || exit 0
-[ -x $DAEMON ] && echo OK           # test -x $DAEMON && exit 0
+[ -x $DAEMON ] || exit 0  # test -x $DAEMON || exit 0
+[ -x $DAEMON ] &amp;&amp; echo OK # test -x $DAEMON &amp;&amp; exit 0
 
 readonly    DAEMON                  # 变量不可变
 unset       DAEMON                  # 删除变量
@@ -30,23 +34,23 @@ Command (命令)
 
 ```
 DATE=`date`
-echo "Date is $DATE"                # ⇒ Date is Thu Jul  2 03:59:57 MST 2009
+echo &quot;Date is $DATE&quot;                # ⇒ Date is Thu Jul  2 03:59:57 MST 2009
 
 USERS=`who | wc -l`
-echo "User: $USERS"                 # ⇒ User: 2 
+echo &quot;User: $USERS&quot;                 # ⇒ User: 2 
 ``` 
 
 Array (一维数组)
 ----------------
 
 ```
-USERS[0]="Zara"
-USERS[1]="Qadir"
-USERS[2]="Mahnaz"
-echo "First  : ${NAME[0]}"
-echo "Second : ${NAME[1]}"
+USERS[0]=&quot;Zara&quot;
+USERS[1]=&quot;Qadir&quot;
+USERS[2]=&quot;Mahnaz&quot;
+echo &quot;First  : ${NAME[0]}&quot;
+echo &quot;Second : ${NAME[1]}&quot;
 
-USERS=("Zara" "Qadir" "Mahnaz")
+USERS=(&quot;Zara&quot; &quot;Qadir&quot; &quot;Mahnaz&quot;)
 echo ${#USERS[@]}                   # 长度 3
 echo ${#USERS[0]}                   # 长度 4
 ```
@@ -57,7 +61,7 @@ Operator (运算符)
 ```
 echo `expr 2 + 2`                   # ⇒ 4
 echo `expr 2 - 2`                   # ⇒ 0
-echo `expr 2 \* 2`                  # ⇒ 4
+echo `expr 2 * 2`                  # ⇒ 4
 echo `expr 2 / 2`                   # ⇒ 1
 echo `expr 2 % 2`                   # ⇒ 0
 ```
@@ -70,35 +74,35 @@ Test (判断)
   
     • -eq                           # ==
     • -ne                           # !=
-    • -gt                           # >
-    • -ge                           # >=
-    • -lt                           # <
-    • -le                           # <=
+    • -gt                           # &gt;
+    • -ge                           # &gt;=
+    • -lt                           # &lt;
+    • -le                           # &lt;=
 
 [ abc = abc ] string
 
     • =                             # ==
     • !=                            # !=
     • -z                            # 长度 = 0
-    • -n                            # 长度 > 0
+    • -n                            # 长度 &gt; 0
 
 [ -x /home/t.js ] file 
 
     • -e                            # 存在
-    • -r                            # 存在 && 可读 
-    • -w                            # 存在 && 可写
-    • -x                            # 存在 && 可运行
-    • -s                            # 存在 && 有字符
-    • -d                            # 存在 && 目录
-    • -f                            # 存在 && 文件
-    • -c                            # 存在 && 字符设备
-    • -b                            # 存在 && 块设备
+    • -r                            # 存在 &amp;&amp; 可读 
+    • -w                            # 存在 &amp;&amp; 可写
+    • -x                            # 存在 &amp;&amp; 可运行
+    • -s                            # 存在 &amp;&amp; 有字符
+    • -d                            # 存在 &amp;&amp; 目录
+    • -f                            # 存在 &amp;&amp; 文件
+    • -c                            # 存在 &amp;&amp; 字符设备
+    • -b                            # 存在 &amp;&amp; 块设备
 
-[ -x /home/t.js -a 1 -eq 1 ] && || ! 
+[ -x /home/t.js -a 1 -eq 1 ] &amp;&amp; || ! 
 
     • !                             # !
     • -o                            # ||
-    • -a                            # &&
+    • -a                            # &amp;&amp;
 ```
 
 Branch (分支)
@@ -110,15 +114,15 @@ b=20
 
 if [ $a == $b ]
 then
-   echo "a equal b"
+   echo &quot;a equal b&quot;
 elif [ $a -gt $b ]
 then
-   echo "a greater than b"
+   echo &quot;a greater than b&quot;
 elif [ $a -lt $b ]
 then
-   echo "a less than b"
+   echo &quot;a less than b&quot;
 else
-   echo "..."
+   echo &quot;...&quot;
 fi
 
 case $a in
@@ -180,14 +184,14 @@ Pipe (管道)
 
 command | file
 
-command > file
-command < file
+command &gt; file
+command &lt; file
 
 ```
-echo "It is a test" >  /home/my.log  # 输出          
-echo "It is a test" >> /home/my.log  # 输出，追加到文件尾部
+echo &quot;It is a test&quot; &gt;  /home/my.log  # 输出          
+echo &quot;It is a test&quot; &gt;&gt; /home/my.log  # 输出，追加到文件尾部
 
-wc -l               <  users         # 输入
+wc -l               &lt;  users         # 输入
 ```
 
 Script (嵌入脚本运行)
@@ -208,30 +212,39 @@ $I (特殊字符)
                                     # 例如，第一个参数是 $1，第二个参数是 $2
 • $#                                # 传递给脚本或函数的参数个数
 • $*                                # 传递给脚本或函数的所有参数
-• $@                                # 传递给脚本或函数的所有参数。被双引号(" ")包含时，与 $* 稍有不同
+• $@                                # 传递给脚本或函数的所有参数。被双引号(&quot; &quot;)包含时，与 $* 稍有不同
 • $?                                # 上个命令的退出状态，或函数的返回值
 • $$                                # 当前 Shell pid   
 
-# ./test.sh "a" "b" "c" "d"
+# ./test.sh &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;
 
-for var in $*                       # a\nb\nc\nd
+for var in $*                       # a
+b
+c
+d
 do                                  
-    echo "$var"                       
+    echo &quot;$var&quot;                       
 done                                
 
-for var in $@                       # a\nb\nc\nd
+for var in $@                       # a
+b
+c
+d
 do                                  
-    echo "$var"                     
+    echo &quot;$var&quot;                     
 done                                
 
-for var in "$*"                     # a b c d
+for var in &quot;$*&quot;                     # a b c d
 do
-    echo "$var"
+    echo &quot;$var&quot;
 done
 
-for var in "$@"                     # a\nb\nc\nd
+for var in &quot;$@&quot;                     # a
+b
+c
+d
 do                                                 
-    echo "$var"                                    
+    echo &quot;$var&quot;                                    
 done                         
 ```
 
@@ -243,15 +256,20 @@ Escape (转义)
 • -n                                # 禁止换行符转义
 • -E                                # 不转义
 
-• \\                                # 反斜杠
-• \a                                # 警报，响铃 
-• \b                                # 退格（删除键）
-• \f                                # 换页，将当前位置移到下页开头
-• \n                                # 换行
-• \r                                # 回车
-• \t                                # 水平制表符
-• \v                                # 垂直制表符
+• \                                # 反斜杠
+• a                                # 警报，响铃 
+•                                 # 退格（删除键）
+•                                 # 换页，将当前位置移到下页开头
+• 
+                                # 换行
+• 
+                                # 回车
+• 	                                # 水平制表符
+•                                 # 垂直制表符
 
-echo -e "ABC\nD"                    # ⇒ ABCD，字符转义
-echo    "ABC\nD"                    # ⇒ ABC\nD
+echo -e &quot;ABC
+D&quot;                    # ⇒ ABCD，字符转义
+echo    &quot;ABC
+D&quot;                    # ⇒ ABC
+D
 ```

@@ -9,7 +9,6 @@
 * [**db_mysql**](/docs/Nim Library/db_mysql.md)
 * [**dynlib**](/docs/Nim Library/dynlib.md)
 * [**fsmonitor**](/docs/Nim Library/fsmonitor.md)
-* [**index**](/docs/Nim Library/index.md)
 * [**locks**](/docs/Nim Library/locks.md)
 * [**macros**](/docs/Nim Library/macros.md)
 * [**marshal**](/docs/Nim Library/marshal.md)

@@ -1,5 +1,4 @@
 * [**previous**](/docs)
-* [**index**](/docs/Deployment/index.md)
 * [**Mongo Server**](/docs/Deployment/Mongo Server.md)
 * [**Mysql Server**](/docs/Deployment/Mysql Server.md)
 * [**Nginx vs Nodejs Cluster**](/docs/Deployment/Nginx vs Nodejs Cluster.md)

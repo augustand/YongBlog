@@ -5,7 +5,6 @@
 * [**Compiler**](/docs/Nim Tutorial/Compiler.md)
 * [**data type**](/docs/Nim Tutorial/data type.md)
 * [**Generic Type**](/docs/Nim Tutorial/Generic Type.md)
-* [**index**](/docs/Nim Tutorial/index.md)
 * [**Install**](/docs/Nim Tutorial/Install.md)
 * [**Macro**](/docs/Nim Tutorial/Macro.md)
 * [**Module**](/docs/Nim Tutorial/Module.md)

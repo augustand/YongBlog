@@ -53,8 +53,7 @@
             highlight: function (code, lang) {
                 if (typeof lang === 'string' && lang.length > 0) {
                     try {
-                        var obj = hljs.highlight(lang, code, true, false);
-                        return obj.value;
+                        return hljs.highlight(lang, code, true, false).value;
                     } catch (e) {
                         return code;
                     }

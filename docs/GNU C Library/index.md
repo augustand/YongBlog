@@ -13,7 +13,6 @@
 * [**临时文件**](/docs/GNU C Library/FS Temporary Files.md)
 * [**什么是工作目录**](/docs/GNU C Library/FS Working Directory.md)
 * [**目录树**](/docs/GNU C Library/FS Working with Directory Trees.md)
-* [**index**](/docs/GNU C Library/index.md)
 * [**关于 GNU C 标准库**](/docs/GNU C Library/Introduction.md)
 * [**fcntl 控制输入输出的行为**](/docs/GNU C Library/IO LL Control Operations on Files.md)
 * [**混合使用流和文件描述符有风险，请谨慎**](/docs/GNU C Library/IO LL Dangers of Mixing Streams and Descriptors.md)

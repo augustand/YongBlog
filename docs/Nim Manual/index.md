@@ -10,7 +10,6 @@
 * [**泛型**](/docs/Nim Manual/Generics.md)
 * [**警卫和锁**](/docs/Nim Manual/Guards and locks.md)
 * [**实现特定的语法标记**](/docs/Nim Manual/Implementation Specific Pragmas.md)
-* [**index**](/docs/Nim Manual/index.md)
 * [**迭代器和 for 语句**](/docs/Nim Manual/Iterators and the for statement.md)
 * [**词法分析**](/docs/Nim Manual/Lexical Analysis.md)
 * [**宏**](/docs/Nim Manual/Macros.md)

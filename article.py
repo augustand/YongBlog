@@ -1,5 +1,10 @@
+# -*- coding:utf-8 -*-
+
 import os
 import re
+
+import gevent
+import time
 
 
 def get_article_title(file_path):
@@ -27,7 +32,8 @@ def getIndex(_path):
         yield tpl.format(_name, p + "/" + _name)
 
     for _name in f:
-        yield tpl.format(get_article_title(p + "/" + _name), p + "/" + _name)
+        if _name != 'index.md' and _name.endswith("md"):
+            yield tpl.format(get_article_title(p + "/" + _name), p + "/" + _name)
 
 
 def genIndex(_path, _content):
@@ -40,7 +46,8 @@ def genIndex(_path, _content):
 
 def genDoc(_path):
     p, d, f = os.walk(_path).next()
-    genIndex(p + "/index.md", getIndex(p))
+    gevent.spawn(genIndex, p + "/index.md", getIndex(p)).join()
+    # genIndex(p + "/index.md", getIndex(p))
     for _d in d:
         genDoc(p + "/" + _d)
 
@@ -51,3 +58,9 @@ if __name__ == '__main__':
     genDoc("docs")
     # print get_article_title("docs/TEST.md")
     # print get_article_title("docs/DOING.md")
+
+    # name = "docs/TEST.md"
+    # print os.path.getmtime(name)  # 获取文件的修改时间
+    # print os.path.getctime(name)  # 获取文件的创建时间
+    # timeArray = time.localtime(os.path.getmtime(name))
+    # print time.strftime("%Y-%m-%d %H:%M:%S", timeArray)

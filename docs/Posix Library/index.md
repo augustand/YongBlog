@@ -3,7 +3,6 @@
 * [**undef  inline**](/docs/Posix Library/c.md)
 * [**error**](/docs/Posix Library/error.md)
 * [**fs**](/docs/Posix Library/fs.md)
-* [**index**](/docs/Posix Library/index.md)
 * [**io**](/docs/Posix Library/io.md)
 * [**include <stdio.h>**](/docs/Posix Library/memmory.md)
 * [**os**](/docs/Posix Library/os.md)

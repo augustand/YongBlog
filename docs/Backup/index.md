@@ -4,4 +4,3 @@
 * [**javascript**](/docs/Backup/javascript)
 * [**nodejs**](/docs/Backup/nodejs)
 * [**rust**](/docs/Backup/rust)
-* [**index**](/docs/Backup/index.md)

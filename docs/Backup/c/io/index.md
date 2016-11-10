@@ -1,6 +1,5 @@
 * [**previous**](/docs/Backup/c)
 * [**epoll**](/docs/Backup/c/io/epoll.md)
-* [**index**](/docs/Backup/c/io/index.md)
 * [**std**](/docs/Backup/c/io/std.md)
 * [**stream**](/docs/Backup/c/io/stream.md)
 * [**syscall**](/docs/Backup/c/io/syscall.md)

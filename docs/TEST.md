@@ -1,3 +1,14 @@
+# 使用 syslog 记录消息
+
+
+title: sssss
+tags: wwww fffff python
+create: dddd
+update: ddd
+count: dddd
+catalog: dd
+-------------
+
 ## abcdefg
 
 abcdefg
@@ -12,9 +23,6 @@ a|b
 a|b
 c|d
 e|f
-
-
-# 使用 syslog 记录消息
 
 许多系统有一个称为 “syslog” 的工具。它允许程序向管理员提交消息，而且可以配置成多样的提交方式。比如直接在控制台打印、用邮件发送给某个人，或者记录到一个日志文件作为备案。
 
@@ -67,32 +75,32 @@ type
         b: char  #  1 - 后面填充
         c: int   #  8
 
-var m = M(a:'a', b:1, c:'c')
+var m = M(a:&#39;a&#39;, b:1, c:&#39;c&#39;)
 
 echo repr addr(m.a)   #  0
 echo repr addr(m.b)   #  8
 echo repr addr(m.c)   # 16 
 echo repr addr(m.d)   # 17 
 
-echo "--------------------------"
+echo &quot;--------------------------&quot;
 
-var n = N(a:'a', b:1, c:'c')
+var n = N(a:&#39;a&#39;, b:1, c:&#39;c&#39;)
 
 echo repr addr(n.a)   #  0
 echo repr addr(n.b)   #  1
 echo repr addr(n.c)   #  9 
 
-echo "--------------------------"
+echo &quot;--------------------------&quot;
 
-var o = O(a:1, b:'b', c:'c')
+var o = O(a:1, b:&#39;b&#39;, c:&#39;c&#39;)
 
 echo repr addr(o.a)   #  0
 echo repr addr(o.b)   #  8
 echo repr addr(o.c)   #  9 
 
-echo "--------------------------"
+echo &quot;--------------------------&quot;
 
-var a = A(a:'a', b:'b', c:1)
+var a = A(a:&#39;a&#39;, b:&#39;b&#39;, c:1)
 
 echo repr addr(a.a)   #  0
 echo repr addr(a.b)   #  1

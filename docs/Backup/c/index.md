@@ -7,4 +7,3 @@
 * [**syntax**](/docs/Backup/c/syntax)
 * [**thread**](/docs/Backup/c/thread)
 * [**utility**](/docs/Backup/c/utility)
-* [**index**](/docs/Backup/c/index.md)

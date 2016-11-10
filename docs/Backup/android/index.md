@@ -1,5 +1,4 @@
 * [**previous**](/docs/Backup)
 * [**android-sdk**](/docs/Backup/android/android-sdk.md)
-* [**index**](/docs/Backup/android/index.md)
 * [**jdk**](/docs/Backup/android/jdk.md)
 * [**nativescript**](/docs/Backup/android/nativescript.md)

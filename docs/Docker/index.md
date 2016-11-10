@@ -17,7 +17,6 @@
 * [**容器示范**](/docs/Docker/Hello World In a Container.md)
 * [**构建高可用的 Swarm**](/docs/Docker/High Availability In Docker Swarm.md)
 * [**编写 Dockerfile 的最佳实践**](/docs/Docker/Image Best Practices For Writing Dockerfiles.md)
-* [**index**](/docs/Docker/index.md)
 * [**安装 Engine，基于 Ubuntu**](/docs/Docker/Install Engine on Ubuntu.md)
 * [**Swarm cluster 应用架构**](/docs/Docker/Learn The Application Architecture.md)
 * [**Docker Machine**](/docs/Docker/Machine Overview.md)

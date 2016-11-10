@@ -21,7 +21,7 @@
     <nav id="gmenu" class="fixer">
         <a class="btn edit" href="#"><i class="fa fa-pencil-square-o"></i></a>
         <a class="btn goto" href="#"><i class="fa fa-th"></i></a>
-        <!--<a class="btn flush" href="/flush"><i class="fa fa-level-up"></i></a>-->
+        <a class="btn flush" href="/{{previous}}"><i class="fa fa-level-up"></i></a>
         <a class="btn home" href="/"><i class="fa fa-home"></i></a>
         <a class="btn github" href="https://github.com/kooksee/YongBlog"><i class="fa fa-github"></i></a>
         <a class="btn logout" href="#"><i class="fa fa-sign-out"></i></a>
@@ -45,7 +45,7 @@
 
 <nav id="gnav" class="fixer none">
     <menu class="fixer">
-        <a class="btn flush" href="/flush"><i class="fa fa-level-up"></i></a>
+        <a class="btn flush" href="/{{previous}}"><i class="fa fa-level-up"></i></a>
         <a class="btn home" href="/"><i class="fa fa-home"></i></a>
         <a class="btn github" href="https://github.com/tulayang/okdoc"><i class="fa fa-github"></i></a>
         <a class="btn close"><i class="fa fa-times"></i></a>
@@ -227,7 +227,10 @@
             articleText = text;
             renderer.setMode(RendererMode.rmArchor | RendererMode.rmContent);
             elArticle.innerHTML = renderer.html(text);
-            elArchor.innerHTML = renderer.archor;
+
+            var _title = articleUrl.split(/\/|\./);
+            _title.pop();
+            elArchor.innerHTML = _title.pop()+renderer.archor;
         }
 
         function renderArticlePriviewer(text) {

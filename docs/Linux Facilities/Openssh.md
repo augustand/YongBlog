@@ -1,9 +1,15 @@
-    Client    ---> 连接             ---> Server
-              <--- 接收公钥          <---                  // 中间人攻击，诱骗密码
-    (核对公钥) ---> 发送密码(公钥加密) ---> (密钥解密)
-              <--- 登陆成功          <---
-              ---> 发送数据(公钥加密) ---> (密钥解密)
-              <--- 确认收到          <---
+title: OpenSSH
+catalog: Linux Facilities
+tags: openssh
+---------------
+
+
+		Client    ---&amp;amp;amp;amp;gt; 连接             ---&amp;amp;amp;amp;gt; Server
+              &amp;amp;amp;amp;lt;--- 接收公钥          &amp;amp;amp;amp;lt;---                  // 中间人攻击，诱骗密码
+    (核对公钥) ---&amp;amp;amp;amp;gt; 发送密码(公钥加密) ---&amp;amp;amp;amp;gt; (密钥解密)
+              &amp;amp;amp;amp;lt;--- 登陆成功          &amp;amp;amp;amp;lt;---
+              ---&amp;amp;amp;amp;gt; 发送数据(公钥加密) ---&amp;amp;amp;amp;gt; (密钥解密)
+              &amp;amp;amp;amp;lt;--- 确认收到          &amp;amp;amp;amp;lt;---
 
 
 Install
@@ -34,9 +40,9 @@ Configuration
        //   GSSAPIDelegateCredentials no
        //   GSSAPIKeyExchange no
        //   GSSAPITrustDNS no
-       //@  是否批处理模式，一般设为"no"；如果设为"yes"，交互式输入口令的提示将被禁止
+       //@  是否批处理模式，一般设为&amp;amp;amp;amp;quot;no&amp;amp;amp;amp;quot;；如果设为&amp;amp;amp;amp;quot;yes&amp;amp;amp;amp;quot;，交互式输入口令的提示将被禁止
        //   BatchMode no
-       //@  是否查看客户端的IP地址以防止DNS欺骗。建议设置为"yes"
+       //@  是否查看客户端的IP地址以防止DNS欺骗。建议设置为&amp;amp;amp;amp;quot;yes&amp;amp;amp;amp;quot;
        //   CheckHostIP yes
        //@  
        //   AddressFamily any
@@ -85,11 +91,11 @@ Configuration
             LoginGraceTime 600
        //@  在多少秒之后自动重新生成服务器的密匙。在多少秒之后自动重新生成服务器的密匙（如果使用密匙）。重新生成密匙是为了防止用盗用的密匙解密被截获的信息。
             KeyRegenerationInterval 3600
-       //@  是否允许root通过ssh登录。这个选项从安全角度来讲应设成"no"。
+       //@  是否允许root通过ssh登录。这个选项从安全角度来讲应设成&amp;amp;amp;amp;quot;no&amp;amp;amp;amp;quot;。
             PermitRootLogin no
        //@  是否验证的时候是否使用“rhosts”和“shosts”文件
             IgnoreRhosts yes
-       //@  是否在进行RhostsRSAAuthentication安全验证的时候忽略用户的"$HOME/.ssh/known_hosts”
+       //@  是否在进行RhostsRSAAuthentication安全验证的时候忽略用户的&amp;amp;amp;amp;quot;$HOME/.ssh/known_hosts”
             IgnoreUserKnownHosts yes
        //@  是否在接收登录请求之前是否检查用户目录和rhosts文件的权限和所有权。这通常是必要的，因为新手经常会把自己的目录和文件设成任何人都有写权限。
             StrictModes yes
@@ -111,7 +117,7 @@ Configuration
             PasswordAuthentication yes
        //@  是否允许用口令为空的帐号登录
             PermitEmptyPasswords no
-       //@  "AllowUsers”的后面可以跟任意的数量的用户名的匹配串，这些字符串用空格隔开。主机名可以是域名或IP地址。
+       //@  &amp;amp;amp;amp;quot;AllowUsers”的后面可以跟任意的数量的用户名的匹配串，这些字符串用空格隔开。主机名可以是域名或IP地址。
             AllowUsers admin
              
 3. /etc/ssh/ssh_known_hosts (保存可信赖的远程主机的公钥)                            
@@ -139,7 +145,7 @@ Copy Key
           usernameM@192.168.1.181:/home/.ssh             # 复制公钥 (需要公钥访问权限)
 
 Service
---------
+--------------
     
     $ service  start   ssh                               // 启动服务 
     $ service  stop    ssh                               // 关闭服务

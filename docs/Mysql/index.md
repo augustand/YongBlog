@@ -1,7 +1,6 @@
 * [**previous**](/docs)
 * [**流，输入一块，输出一块**](/docs/Mysql/Explain.md)
 * [**General Information**](/docs/Mysql/General Information.md)
-* [**index**](/docs/Mysql/index.md)
 * [**Linux 平台，基于源码，安装和升级 Mysql**](/docs/Mysql/Installing and Upgrading Mysql on Linux Using Sources or Gneric Binaries.md)
 * [**Linux 平台，基于 APT 库，安装和升级 Mysql**](/docs/Mysql/Installing and Upgrading Mysql on Linux Using the APT Repository.md)
 * [**GENERAL**](/docs/Mysql/my.cnf.md)
